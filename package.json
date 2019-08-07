@@ -1,0 +1,23 @@
+{
+  "name": "testing-practice-in-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userman95/Testing-Practice-In-Js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/userman95/Testing-Practice-In-Js/issues"
+  },
+  "homepage": "https://github.com/userman95/Testing-Practice-In-Js#readme"
+}
