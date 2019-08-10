@@ -38,19 +38,22 @@ const caesarCipher = (()=>{
     }
 
     function normalizeString(string){
-        string = string.toLowerCase().replace(/[.,\/#!$%\^&\*\[\]@;:{}=\-_`~()]/g,"");
+        string = string.replace(/[.,\/#!$%\^&\*\[\]@;:{}=\-_`~()]/g,"");
         return string;
     }
 
     function encrypt(string,step){    
         string = normalizeString(string); 
-        let symbols = translateToNums();   
+        let symbols = translateToNums();
         let encryptIndexes = [];
         for(let i of string){
+            if (i == i.toLowerCase())            
+                symbols = symbols.map((letter)=>letter.toLowerCase());            
+            else            
+                symbols = symbols.map((letter)=>letter.toUpperCase());            
             let index = (symbols.indexOf(i)+step) % 26;
             encryptIndexes.push(symbols[index]);
         }
-
          return encryptIndexes.join("");
     }
 
@@ -59,15 +62,23 @@ const caesarCipher = (()=>{
         let symbols = translateToNums();   
         let decryptIndexes = [];
         for(let i of string){
+            if (i == i.toLowerCase())            
+                symbols = symbols.map((letter)=>letter.toLowerCase());            
+            else            
+                symbols = symbols.map((letter)=>letter.toUpperCase());    
+           
             let index = (symbols.indexOf(i)-step) % 26;
-            decryptIndexes.push(symbols[index]);
+           
+            if(index < 0 && index != -1)
+                 decryptIndexes.push(symbols[symbols.length+index]);
+            else
+                decryptIndexes.push(symbols[index]);
         }
-
          return decryptIndexes.join("");
     }
 
     return {
-        encrypt,decrypt,normalizeString
+        encrypt,decrypt
     };
 })();
 
