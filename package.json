@@ -2,11 +2,17 @@
   "name": "testing-practice-in-js",
   "version": "1.0.0",
   "description": "",
-  "main": "sum.js",
+  "main": "testingPractice.js",
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "jest": "^24.8.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
   "scripts": {
     "test": "jest"
   },
