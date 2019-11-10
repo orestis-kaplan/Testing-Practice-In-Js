@@ -3,12 +3,13 @@
 This project is built to understand basic concepts of javascript testing techniques.
 
 ## Getting Started
+Initialize npm with:
 
 `npm init`
 
-### Installing
+## Installing
 
-### Special Note on using ES6 import statements with Jest
+#### Special Note on using ES6 import statements with Jest
 
 The current version of Jest as it is does not recognize the import statement. In order for you to be able to use ES6 modules for this project you may do the following:
 
@@ -21,13 +22,13 @@ Create a .babelrc file in the project’s root with the following lines of code:
 ```
 { "presets": ["@babel/preset-env"] }
 ```
-### Install eslint for better linting in the project
+#### Install eslint for better linting in the project
 
 Install eslint with running the following command
 ```
 npm install eslint --save-dev
 ```
-### Install jest 
+#### Install jest 
 
 ```
 npm install --save-dev jest
